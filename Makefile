@@ -27,10 +27,10 @@ $(info Using $(shell $(PYTHON) --version) at $(shell where $(PYTHON) 2> $(NULL))
 
 init:
 ifeq ($(OS),Windows_NT)
-	@del .git\hooks\pre-commit ||:
-	@mklink .git\hooks\pre-commit ..\..\githooks\pre-commit ||:
+	@del .git\hooks\post-commit ||:
+	@mklink .git\hooks\post-commit ..\..\githooks\post-commit ||:
 else
-	@ln -s -f ../../githooks/pre-commit .git/hooks/pre-commit
+	@ln -s -f ../../githooks/post-commit .git/hooks/post-commit
 endif
 
 host:
