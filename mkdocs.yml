@@ -1,0 +1,9 @@
+site_name: My Docs
+theme:
+  name: mkdocs
+  custom_dir: cyborg/
+  nav_style: dark
+extra_javascript:
+  - js/index.js
+plugins:
+  - bootstrap-tooltips

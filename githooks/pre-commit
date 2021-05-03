@@ -1,0 +1,27 @@
+#!/bin/sh
+PYTHON="python"
+
+echo Re-building the site...
+
+if command -v python3 --version > /dev/null 2>&1
+then
+	PYTHON="python3"
+elif command -v py -3 --version > /dev/null 2>&1
+then
+	PYTHON="py -3"
+fi
+PYTHONVER=$($PYTHON --version 2> /dev/null)
+PYTHONPATH=$(where $PYTHON 2> /dev/null)
+echo "Using $PYTHONVER from $PYTHONPATH"
+
+result=$($PYTHON -m mkdocs build)
+if $result
+then
+	echo "Done."
+	git add site/
+	git commit --allow-empty --amend -C HEAD --no-verify
+	exit 0
+else
+	echo "Build failed with exit code $result"
+	exit $result
+fi
