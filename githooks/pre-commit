@@ -19,7 +19,6 @@ if $result
 then
 	echo "Done."
 	git add site/
-	git commit --allow-empty --amend -C HEAD --no-verify
 	exit 0
 else
 	echo "Build failed with exit code $result"
