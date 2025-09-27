@@ -8,6 +8,15 @@ extra_javascript:
 plugins:
   - bootstrap-tooltips
   - search
+  - encryptcontent:
+      password_file: secrets.yml
+      password_button: True
+      search_index: 'dynamically'
+      summary: 'Ciphered page'
+      encryption_info_message: 'This page is written in a cipher you do not understand.'
+      encrypted_something:
+        toc-collapse: [div, id]
 nav:
   - 'index.md'
   - 'journal.md'
+  - 'secret.md'
