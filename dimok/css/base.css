@@ -333,3 +333,49 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
         padding: 0.5rem 0;
     }
 }
+
+/* Ciphered page styling */
+#mkdocs-content-password {
+    background: #f8f0d9; /* parchment tone */
+    border: 2px solid #8b0000; /* unified deep red border */
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-family: 'UnifrakturCook', 'Laila', sans-serif; /* Gothic look */
+    font-size: 1.1em;
+    color: #2b1a1a;
+    outline: none;
+    transition: box-shadow 0.2s ease;
+}
+
+#mkdocs-content-password:focus {
+    box-shadow: 0 0 8px #8b0000;
+}
+
+#mkdocs-decrypt-button {
+    background: #8b0000; /* unified deep red */
+    border: 2px solid #8b0000;
+    border-radius: 6px;
+    color: #f8f0d9; /* parchment text */
+    font-family: 'UnifrakturCook', 'Laila', sans-serif;
+    font-size: 1.1em;
+    padding: 6px 14px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+#mkdocs-decrypt-button:hover {
+    background: #a11212; /* slightly brighter blood red */
+    transform: translateY(-1px);
+}
+
+#mkdocs-decrypt-button:active {
+    transform: translateY(1px);
+}
+
+#mkdocs-decrypt-msg {
+    margin-top: 6px;
+    font-family: 'Laila', sans-serif;
+    font-style: italic;
+	font-size: 0.9rem;
+    color: #8b0000; /* unified deep red for errors */
+}
