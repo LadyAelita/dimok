@@ -25,7 +25,10 @@ PYTHON ?= $(PYTHON.3)
 endif
 $(info Using $(shell $(PYTHON) --version) at $(shell where $(PYTHON) 2> $(NULL)))
 
-init:
+install: requirements.txt
+	$(PYTHON) -m pip install -r requirements.txt
+
+init: install
 ifeq ($(OS),Windows_NT)
 	@del .git\hooks\pre-commit ||:
 	@mklink .git\hooks\pre-commit ..\..\githooks\pre-commit ||:
