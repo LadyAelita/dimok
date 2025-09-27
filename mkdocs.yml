@@ -1,9 +1,13 @@
-site_name: My Docs
+site_name: Dimok
 theme:
   name: mkdocs
-  custom_dir: cyborg/
-  nav_style: dark
+  custom_dir: dimok/
+  nav_style: light
 extra_javascript:
   - js/index.js
 plugins:
   - bootstrap-tooltips
+  - search
+nav:
+  - 'index.md'
+  - 'journal.md'
